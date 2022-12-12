@@ -6,6 +6,7 @@
 *   [x] Typescript
 *   [x] Less
 *   [x] svgr 
+*   [x] Storybook
 
 ## Clone
 
@@ -15,6 +16,6 @@ npx degit https://git.cubetiqs.com/vutpov/vite-react-typescript-lib.git your-lib
 
 ## Note
 
-Don't forget to change library name in package.json in root and inside example
+Don't forget to change library name in package.json
 
 * [vuthPov](https://github.com/vuthpov)
