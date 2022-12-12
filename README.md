@@ -18,4 +18,4 @@ npx degit https://github.com/vutpov/vite-react-typescript-lib.git your-lib-name
 
 Don't forget to change library name in package.json
 
-* [vuthPov](https://github.com/vuthpov)
+* [VuthPov](https://github.com/vuthpov)
