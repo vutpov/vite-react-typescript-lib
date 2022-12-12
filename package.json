@@ -1,0 +1,78 @@
+{
+  "name": "your-lib-name",
+  "version": "1.0.0",
+  "description": "description",
+  "contributors": [
+    {
+      "name": "VuthPov",
+      "url": "https://github.com/vuthpov"
+    }
+  ],
+  "license": "MIT",
+  "main": "build/index.mjs",
+  "source": "src/index.tsx",
+  "engines": {
+    "node": ">=10"
+  },
+  "types": "build/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./build/index.mjs"
+    }
+  },
+  "files": [
+    "build"
+  ],
+  "scripts": {
+    "build": "rimraf build && tsc && vite build --force",
+    "start": "vite build --force --watch",
+    "test": "run-s test:unit test:lint test:build",
+    "test:build": "run-s build",
+    "install-pk": "yarn install",
+    "predeploy": "cd example && yarn install && yarn run build",
+    "deploy-storybook": "gh-pages -d storybook-static",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "nuke": "rimraf build && rimraf example/node_modules && rimraf node_modules && yarn && cd example && yarn && cd .."
+  },
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.5",
+    "@storybook/addon-actions": "^6.5.14",
+    "@storybook/addon-essentials": "^6.5.14",
+    "@storybook/addon-interactions": "^6.5.14",
+    "@storybook/addon-links": "^6.5.14",
+    "@storybook/builder-webpack5": "^6.5.14",
+    "@storybook/cli": "^6.5.14",
+    "@storybook/manager-webpack5": "^6.5.14",
+    "@storybook/react": "^6.5.14",
+    "@storybook/testing-library": "^0.0.13",
+    "@types/node": "^18.0.3",
+    "@types/react": "^17.0.39",
+    "@types/react-dom": "^17.0.11",
+    "@vitejs/plugin-react": "^2.2.0",
+    "gh-pages": "^4.0.0",
+    "less": "^4.1.3",
+    "less-loader": "^11.1.0",
+    "prettier": "^2.6.2",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-scripts": "^5.0.1",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.7.2",
+    "url-loader": "^4.1.1",
+    "vite": "^3.2.4",
+    "vite-plugin-dts": "^1.7.1",
+    "vite-plugin-svgr": "^2.4.0"
+  },
+  "dependencies": {},
+  "publishConfig": {
+    "access": "public"
+  },
+  "browserslist": [
+    "Edge 16"
+  ]
+}
