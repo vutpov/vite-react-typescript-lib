@@ -11,7 +11,7 @@
 ## Clone
 
 ```bash
-npx degit https://git.cubetiqs.com/vutpov/vite-react-typescript-lib.git your-lib-name
+npx degit https://github.com/vutpov/vite-react-typescript-lib.git your-lib-name
 ```
 
 ## Note
